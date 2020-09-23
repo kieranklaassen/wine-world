@@ -4,6 +4,7 @@ import FatalErrorPage from 'src/pages/FatalErrorPage'
 
 import Routes from 'src/Routes'
 
+import 'fontsource-roboto'
 import './index.css'
 
 ReactDOM.render(
