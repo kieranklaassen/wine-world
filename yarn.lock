@@ -1976,6 +1976,17 @@
     react-is "^16.8.0"
     react-transition-group "^4.4.0"
 
+"@material-ui/lab@^4.0.0-alpha.56":
+  version "4.0.0-alpha.56"
+  resolved "https://registry.yarnpkg.com/@material-ui/lab/-/lab-4.0.0-alpha.56.tgz#ff63080949b55b40625e056bbda05e130d216d34"
+  integrity sha512-xPlkK+z/6y/24ka4gVJgwPfoCF4RCh8dXb1BNE7MtF9bXEBLN/lBxNTK8VAa0qm3V2oinA6xtUIdcRh0aeRtVw==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@material-ui/utils" "^4.10.2"
+    clsx "^1.0.4"
+    prop-types "^15.7.2"
+    react-is "^16.8.0"
+
 "@material-ui/styles@^4.10.0":
   version "4.10.0"
   resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.10.0.tgz#2406dc23aa358217aa8cc772e6237bd7f0544071"
@@ -12642,6 +12653,11 @@ react-hotkeys@2.0.0:
   dependencies:
     prop-types "^15.6.1"
 
+react-is-mounted-hook@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-is-mounted-hook/-/react-is-mounted-hook-1.0.3.tgz#297e3ccc9f3c5eb2e3a867576e1c9e5c59c3d39e"
+  integrity sha512-YCCYcTVYMPfTi6WhWIwM9EYBcpHoivjjkE90O5ScsE9wXSbeXGZvLDMGt4mdSNcWshhc8JD0AzgBmsleCSdSFA==
+
 react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -14840,6 +14856,20 @@ use-callback-ref@^1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/use-callback-ref/-/use-callback-ref-1.2.4.tgz#d86d1577bfd0b955b6e04aaf5971025f406bea3c"
   integrity sha512-rXpsyvOnqdScyied4Uglsp14qzag1JIemLeTWGKbwpotWht57hbP78aNT+Q4wdFKQfQibbUX4fb6Qb4y11aVOQ==
+
+use-places-autocomplete@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/use-places-autocomplete/-/use-places-autocomplete-1.5.1.tgz#189a8f59db4e512c9b51379b395529f80804eb6b"
+  integrity sha512-G9CWiMFYUMchZVEOke60m55B3qkR7vKkLCeL/0pcXSieCydxe+V66Y/vWW6Ce9xZaYlv8EzCbwOkznIsPAuH5Q==
+  dependencies:
+    lodash.debounce "^4.0.8"
+
+use-script@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/use-script/-/use-script-2.0.0.tgz#e38cfc984a21d20292ba9abaa079f473ad6eef64"
+  integrity sha512-tVPVBPdqXlJ1wRRh+tB/CV6IuXbuZDy8siK7+qRBIg5GpQhskRDGRf3Vlj2eltehQEy3rDqGmP9HpoWyTI4MBw==
+  dependencies:
+    react-is-mounted-hook "^1.0.2"
 
 use-sidecar@^1.0.1:
   version "1.0.3"
