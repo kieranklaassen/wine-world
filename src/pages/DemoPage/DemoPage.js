@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
+import AddIcon from "@material-ui/icons/Add";
 
 import AddressBox from "./../../components/AddressBox/AddressBox";
 import MultiImageBox from "./../../components/MultiImageBox/MultiImageBox";
@@ -97,15 +98,18 @@ export default function Album() {
                 </Typography>
                 <div className={classes.heroButtons}>
                   <Grid container spacing={2}>
-                    <Grid item xs={12}><AddressBox /></Grid>
+                    <Grid item xs={12}>
+                      <AddressBox label="Enter your address to buy" />
+                    </Grid>
                     <Grid item>
-                      <Button variant="contained" color="primary">
+                      {/* FIXME: enabke button when AddressBox is filled in */}
+                      <Button variant="contained" color="primary" startIcon={<AddIcon />} disabled>
                         Add to cart
                       </Button>
                     </Grid>
                     <Grid item>
                       <Button variant="outlined" color="primary">
-                        get more information
+                        learn about the winery
                       </Button>
                     </Grid>
                   </Grid>
