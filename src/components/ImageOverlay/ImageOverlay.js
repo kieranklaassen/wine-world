@@ -18,10 +18,10 @@ const ImageOverlay = ({ image, close, withBackdrop }) => {
           { "opacity-50": withBackdrop, "opacity-0": !withBackdrop },
         ])}
       ></div>
-      <div className="relative z-20 max-w-4xl mx-auto">
+      <div className="relative z-20 max-w-3xl mx-auto">
         <div className="m-2 overflow-hidden rounded-lg shadow sm:shadow-lg sm:mt-8 lg:shadow-2xl">
           <div className="absolute top-0 right-0 z-30 p-6 mt-6">
-            <IconButton aria-label="close" onClick={close}>
+            <IconButton aria-label="close" onClick={close} style={{ backgroundColor: "rgba(255,255,255,0.5)" }}>
               <CloseIcon />
             </IconButton>
           </div>
