@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import AddressBox from './AddressBox'
+import React, { useState } from 'react';
+import AddressBox from './AddressBox';
 
 export const simple = () => {
-  const [addressInfo, setAddressInfo] = useState()
+  const [addressInfo, setAddressInfo] = useState();
 
-  return <AddressBox />
-}
+  return <AddressBox onChange={(o) => console.log(o)} label="Street Address" />;
+};
 
-export default { title: 'Components/AddressBox' }
+export default { title: 'Components/AddressBox' };

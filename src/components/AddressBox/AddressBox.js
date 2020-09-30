@@ -21,40 +21,40 @@ const AddressBox = ({ onChange, label, requireFullAddress }) => {
   });
 
   async function handleSelect(_, newValue) {
-    const details = await getDetails(newValue);
+    const details = newValue && (await getDetails(newValue));
+    console.log(details);
 
     const result = {
       state: details ? 'completed' : 'empty',
     };
 
-    details.address_components.forEach((addressComponent) => {
-      result[camelCase(addressComponent.types[0])] = addressComponent.long_name;
-    });
+    details &&
+      details.address_components.forEach((addressComponent) => {
+        result[camelCase(addressComponent.types[0])] = addressComponent.long_name;
+      });
 
     typeof onChange === 'function' && onChange(result);
   }
 
   return (
-    <div>
-      <h2>{'AddressBox'}</h2>
-      <Autocomplete
-        options={data}
-        filterOptions={(x) => x}
-        getOptionLabel={(suggestion) => suggestion.description}
-        onChange={handleSelect}
-        onInputChange={(_, newInputValue) => setValue(newInputValue)}
-        renderInput={(params) => (
-          // TODO: This is where the design language gets applied
-          <TextField {...params} label={label} variant="outlined" />
-        )}
-        renderOption={(option) => (
-          <>
-            <strong>{option.structured_formatting.main_text}</strong>&nbsp;
-            <em>{option.structured_formatting.secondary_text}</em>
-          </>
-        )}
-      />
-    </div>
+    <Autocomplete
+      options={data}
+      filterOptions={(x) => x}
+      getOptionLabel={(suggestion) => suggestion.description}
+      getOptionSelected={(option, value) => option.place_id == value.place_id}
+      onChange={handleSelect}
+      onInputChange={(_, newInputValue) => setValue(newInputValue)}
+      renderInput={(params) => (
+        // TODO: This is where the design language gets applied
+        <TextField {...params} label={label} variant="outlined" />
+      )}
+      renderOption={(option) => (
+        <>
+          <strong>{option.structured_formatting.main_text}</strong>&nbsp;
+          <em>{option.structured_formatting.secondary_text}</em>
+        </>
+      )}
+    />
   );
 };
 
