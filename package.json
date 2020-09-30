@@ -1,19 +1,23 @@
 {
   "private": true,
-  "workspaces": {
-    "packages": [
-      "api",
-      "web"
-    ]
-  },
   "devDependencies": {
-    "@redwoodjs/core": "^0.19.1"
+    "@babel/core": "^7.11.6",
+    "@storybook/addon-actions": "^6.0.22",
+    "@storybook/addon-essentials": "^6.0.22",
+    "@storybook/addon-links": "^6.0.22",
+    "@storybook/react": "^6.0.22",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1",
+    "sb": "^6.0.22"
   },
-  "eslintConfig": {
-    "extends": "@redwoodjs/eslint-config"
-  },
+  "eslintConfig": {},
   "engines": {
     "node": ">=12",
     "yarn": ">=1.15"
+  },
+  "dependencies": {},
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
