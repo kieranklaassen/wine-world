@@ -1,14 +1,15 @@
-import React from 'react'
-import { useState } from 'react'
-import usePlacesAutocomplete, { getDetails } from 'use-places-autocomplete'
-import { TextField } from '@material-ui/core'
-import { Autocomplete } from '@material-ui/lab'
-import { useScript } from 'use-script'
+import React from 'react';
+import { useState } from 'react';
+import usePlacesAutocomplete, { getDetails } from 'use-places-autocomplete';
+import { TextField } from '@material-ui/core';
+import { Autocomplete } from '@material-ui/lab';
+import { useScript } from 'use-script';
+import { camelCase } from 'camel-case';
 
-const AddressBox = ({ onChange }) => {
+const AddressBox = ({ onChange, label, requireFullAddress }) => {
   useScript({
     src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&libraries=places&callback=initMap`,
-  })
+  });
 
   const {
     suggestions: { data },
@@ -17,13 +18,20 @@ const AddressBox = ({ onChange }) => {
     requestOptions: {},
     debounce: 300,
     callbackName: 'initMap',
-  })
-
-  const [selection, setSelection] = useState()
+  });
 
   async function handleSelect(_, newValue) {
-    setSelection(newValue)
-    typeof onChange === 'function' && onChange(await getDetails(newValue))
+    const details = await getDetails(newValue);
+
+    const result = {
+      state: details ? 'completed' : 'empty',
+    };
+
+    details.address_components.forEach((addressComponent) => {
+      result[camelCase(addressComponent.types[0])] = addressComponent.long_name;
+    });
+
+    typeof onChange === 'function' && onChange(result);
   }
 
   return (
@@ -37,7 +45,7 @@ const AddressBox = ({ onChange }) => {
         onInputChange={(_, newInputValue) => setValue(newInputValue)}
         renderInput={(params) => (
           // TODO: This is where the design language gets applied
-          <TextField {...params} label='Street Address' variant='outlined' />
+          <TextField {...params} label={label} variant="outlined" />
         )}
         renderOption={(option) => (
           <>
@@ -47,7 +55,7 @@ const AddressBox = ({ onChange }) => {
         )}
       />
     </div>
-  )
-}
+  );
+};
 
-export default AddressBox
+export default AddressBox;
