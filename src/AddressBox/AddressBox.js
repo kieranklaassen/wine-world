@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import usePlacesAutocomplete, { getDetails } from 'use-places-autocomplete'
 import { TextField } from '@material-ui/core'
@@ -8,6 +9,7 @@ const AddressBox = ({ onChange }) => {
   useScript({
     src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&libraries=places&callback=initMap`,
   })
+
   const {
     suggestions: { data },
     setValue,
@@ -17,13 +19,11 @@ const AddressBox = ({ onChange }) => {
     callbackName: 'initMap',
   })
 
-  console.log(process.env)
-
   const [selection, setSelection] = useState()
 
   async function handleSelect(_, newValue) {
     setSelection(newValue)
-    console.log(await getDetails(newValue))
+    typeof onChange === 'function' && onChange(await getDetails(newValue))
   }
 
   return (
@@ -37,7 +37,7 @@ const AddressBox = ({ onChange }) => {
         onInputChange={(_, newInputValue) => setValue(newInputValue)}
         renderInput={(params) => (
           // TODO: This is where the design language gets applied
-          <TextField {...params} label="Street Address" variant="outlined" />
+          <TextField {...params} label='Street Address' variant='outlined' />
         )}
         renderOption={(option) => (
           <>
