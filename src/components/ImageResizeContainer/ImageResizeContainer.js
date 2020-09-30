@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import './../../index.css'
 
 const ImageResizeContainer = ({ src, transform, maxWidth}) => {
 
   // TODO: make this work nicer for high pixel density screens
+  // TODO: make more efficient so that only max width in included if it's not in current range
   const breakpoints = [200, 400, 800, 1600, maxWidth].filter((bp) => {
     return bp <= maxWidth
   })
@@ -15,25 +17,25 @@ const ImageResizeContainer = ({ src, transform, maxWidth}) => {
   })
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden" style={{ maxWidth: `${maxWidth}px` || "100%" }}>
       <img
         src={srcSet[0]}
-        srcSet={srcSet.join(', ')}
+        srcSet={srcSet.join(", ")}
         sizes="(min-width: 640px) 640px, 100vw" // TODO: determin the maximum size for images
         alt="A wine bottle" // TODO: Add alt
         className="relative z-20"
-        width={`${maxWidth}px` || '100%'}
+        width={`${maxWidth}px` || "100%"}
         height="100%"
       />
       <div
         style={{
           backgroundImage: `url(${preloadSrc})`,
-          filter: 'blur(12px)',
+          filter: "blur(12px)",
         }}
         className="absolute inset-0 z-0 bg-gray-200 bg-cover animate-pulse"
       ></div>
     </div>
-  )
+  );
 }
 
 ImageResizeContainer.propTypes = {
