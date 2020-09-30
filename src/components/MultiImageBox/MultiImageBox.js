@@ -13,27 +13,29 @@ const MultiImageBox = ({ images, overLayOpen }) => {
 
   return (
     <div>
-      {overLay && <ImageOverlay close={() => serOverLay(false)} image={activeImage} />}
-      <div className="grid max-w-md grid-cols-3 gap-2">
+      {overLay && <ImageOverlay close={() => serOverLay(false)} image={activeImage} withBackdrop />}
+      <div className="relative z-0 grid max-w-md grid-cols-3 gap-2">
         <div className="col-span-3 overflow-hidden rounded-lg">
           <ImageResizeContainer src={activeImage} transform="c_thumb" maxWidth={1200} />
         </div>
-        {images.map((image, id) => (
-          <div
-            key={id}
-            className={clsx({
-              "border-vine-400 border-b-4": activeImage == image,
-            })}
-          >
-            <button
-              className="overflow-hidden transition duration-300 ease-in-out rounded-lg focus:outline-none focus:shadow-outline hover:opacity-75"
-              onMouseEnter={() => setActiveImage(image)}
-              onClick={() => serOverLay(true)}
-            >
-              <ImageResizeContainer src={image} transform="c_thumb" maxWidth={400} />
-            </button>
-          </div>
-        ))}
+        {images.length > 1
+          ? images.map((image, id) => (
+              <div
+                key={id}
+                className={clsx({
+                  "border-vine-400 border-b-4": activeImage == image,
+                })}
+              >
+                <button
+                  className="overflow-hidden transition duration-300 ease-in-out rounded-lg focus:outline-none focus:shadow-outline hover:opacity-75"
+                  onMouseEnter={() => setActiveImage(image)}
+                  onClick={() => serOverLay(true)}
+                >
+                  <ImageResizeContainer src={image} transform="c_thumb" maxWidth={400} />
+                </button>
+              </div>
+            ))
+          : null}
       </div>
     </div>
   );

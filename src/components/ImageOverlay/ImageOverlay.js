@@ -9,10 +9,8 @@ import ImageResizeContainer from "./../ImageResizeContainer/ImageResizeContainer
 
 const ImageOverlay = ({ image, close, withBackdrop }) => {
   return (
-    <div className="absolute inset-0 z-10 flex justify-center w-full h-full overflow-y-auto">
-      {withBackdrop && (
-        <div onClick={close} className="fixed w-full h-full opacity-50 bg-vine-500 modal-overlay"></div>
-      )}
+    <div className="absolute inset-0 flex justify-center w-full h-full overflow-y-auto" style={{ zIndex: 1200 }}>
+      {withBackdrop && <div onClick={close} className="fixed w-full h-full opacity-50 bg-vine-500 modal-overlay"></div>}
       <div className="relative z-20 max-w-4xl mx-auto">
         <div className="m-2 overflow-hidden rounded-lg shadow sm:shadow-lg sm:m-4 lg:shadow-2xl">
           <div className="absolute top-0 right-0 z-30">

@@ -9,7 +9,7 @@ const images = [
 
 export const threeImages = () => {
   return (
-    <div className="m-12">
+    <div className="m-2 lg:m-12">
       <MultiImageBox images={images} />
     </div>
   )
@@ -17,7 +17,7 @@ export const threeImages = () => {
 
 export const overlayActive = () => {
   return (
-    <div className="m-12">
+    <div className="m-2 lg:m-12">
       <MultiImageBox images={images} overLayOpen />
     </div>
   )
@@ -25,7 +25,7 @@ export const overlayActive = () => {
 
 export const oneImage = () => {
   return (
-    <div className="m-12">
+    <div className="m-2 lg:m-12">
       <MultiImageBox images={images.slice(0, 1)} />
     </div>
   )
@@ -33,7 +33,7 @@ export const oneImage = () => {
 
 export const twoImages = () => {
   return (
-    <div className="m-12">
+    <div className="m-2 lg:m-12">
       <MultiImageBox images={images.slice(0, 2)} />
     </div>
   )
