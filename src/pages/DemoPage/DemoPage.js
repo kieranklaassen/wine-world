@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 
+import AddressBox from "./../../components/AddressBox/AddressBox";
 import MultiImageBox from "./../../components/MultiImageBox/MultiImageBox";
 
 function Copyright() {
@@ -96,6 +97,7 @@ export default function Album() {
                 </Typography>
                 <div className={classes.heroButtons}>
                   <Grid container spacing={2}>
+                    <Grid item xs={12}><AddressBox /></Grid>
                     <Grid item>
                       <Button variant="contained" color="primary">
                         Add to cart
