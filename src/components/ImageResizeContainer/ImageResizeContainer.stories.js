@@ -32,9 +32,23 @@ export const large = () => {
 export const responsive = () => {
   return (
     <div className="w-full p-4 md:max-w-lg xl:max-w-2xl">
-      <ImageResizeContainer src="https://res.cloudinary.com/dhcx3vzmg/image/upload/v1601406286/eu3srvlbpxj95ynvsjjv.jpg" />
+      <ImageResizeContainer
+        src="https://res.cloudinary.com/dhcx3vzmg/image/upload/v1601406286/eu3srvlbpxj95ynvsjjv.jpg"
+        maxWidth={1024}
+      />
     </div>
-  )
+  );
 }
 
-export default { title: 'Components/ImageResizeContainer' }
+
+export const withTransform = () => {
+  return (
+      <ImageResizeContainer
+        src="https://res.cloudinary.com/dhcx3vzmg/image/upload/v1601406286/eu3srvlbpxj95ynvsjjv.jpg"
+        maxWidth={970}
+        transform="c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative,l_text:montserrat_25_style_light_align_center:Shop%20Now,w_0.5,y_0.18"
+      />
+  );
+};
+
+export default { title: "Components/ImageResizeContainer" };
