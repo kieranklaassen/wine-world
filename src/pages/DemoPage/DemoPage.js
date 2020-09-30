@@ -91,7 +91,7 @@ export default function Album() {
                 <Typography component="h1" variant="h2" color="textPrimary" gutterBottom>
                   Lodi Sauvignon Blanc
                 </Typography>
-                <Typography variant="h5" color="textSecondary" paragraph>
+                <Typography variant="h6" color="textSecondary" paragraph>
                   Not a typo or a mis-print... we actually made a Sauvignon Blanc. Citrus and green apple dominate the
                   nose - with bright acidity and a touch of richness helping to keep things fresh and exciting. The
                   finish offers up that subtle "grassy-ness" that you'd expect.

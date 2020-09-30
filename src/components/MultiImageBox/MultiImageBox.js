@@ -36,9 +36,9 @@ const MultiImageBox = ({ images, overLayOpen }) => {
   return (
     <div>
       {overLay && <ImageOverlay close={() => setOverLay(false)} image={activeImage} withBackdrop images={images} />}
-      <div className="relative z-0 grid max-w-md grid-cols-3 gap-2">
+      <div className="relative z-0 grid max-w-md grid-cols-3 gap-1 sm:gap-2">
         <div className="col-span-3 overflow-hidden rounded-lg">
-          <button type="button" onClick={() => setOverLay(true)}>
+          <div className="cursor-pointer" onClick={() => setOverLay(true)}>
             {images.map((image) => {
               return (
                 <div className={clsx({ hidden: activeImage != image, block: activeImage == image })}>
@@ -46,7 +46,7 @@ const MultiImageBox = ({ images, overLayOpen }) => {
                 </div>
               );
             })}
-          </button>
+          </div>
         </div>
         {images.length > 1 && ImageSwitcher()}
       </div>

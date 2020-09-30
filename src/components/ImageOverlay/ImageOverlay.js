@@ -18,7 +18,10 @@ const ImageOverlay = ({ image, images, close, withBackdrop }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex justify-center w-full h-full overflow-y-auto" style={{ zIndex: 1200 }}>
+    <div
+      className="fixed inset-0 flex items-center justify-center w-full h-full overflow-y-auto"
+      style={{ zIndex: 1200 }}
+    >
       <div
         onClick={close}
         className={clsx([
@@ -37,11 +40,11 @@ const ImageOverlay = ({ image, images, close, withBackdrop }) => {
           {images.length > 1 ? (
             images.map((image) => {
               return (
-                <button type="button" onClick={() => next()}>
+                <div className="cursor-pointer" onClick={() => next()}>
                   <div className={clsx({ hidden: activeImage != image, block: activeImage == image })}>
                     <ImageResizeContainer src={image} maxWidth={1200} transform="c_thumb" />
                   </div>
-                </button>
+                </div>
               );
             })
           ) : (
