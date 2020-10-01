@@ -13,7 +13,7 @@ const ImageOverlay = ({ image, images, close, withBackdrop }) => {
   const overlayRef = useRef()
 
   useEffect(() => {
-    overlayRef.current.focus()
+    if (overlayRef.current) overlayRef.current.focus()
   }, [overlayRef])
 
   const next = () => {
