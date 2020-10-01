@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState } from 'react'
+import { useState } from React from 'react'
+
 import usePlacesAutocomplete, { getDetails } from 'use-places-autocomplete'
 import { TextField } from '@material-ui/core'
 import { Autocomplete } from '@material-ui/lab'
