@@ -1,11 +1,8 @@
-import React from "react";
-import DemoPage from "./DemoPage";
+import React from 'react'
+import DemoPage from './DemoPage'
 
 export const combined = () => {
-  return (
-    <DemoPage />
-  );
-};
+  return <DemoPage />
+}
 
-
-export default { title: "Pages/DemoPage" };
+export default { title: 'Pages/DemoPage' }
