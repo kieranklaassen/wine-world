@@ -64,8 +64,9 @@ const AddressBox = ({
     typeof onChange === 'function' && onChange(result)
   }
 
+  // TODO: When ejecting out of STORYBOOK, rename this env var
   useScript({
-    src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&libraries=places&callback=initMap`
+    src: `https://maps.googleapis.com/maps/api/js?key=${process.env.STORYBOOK_GOOGLE_API_KEY}&libraries=places&callback=initMap`
   })
 
   useEffect(() => {
