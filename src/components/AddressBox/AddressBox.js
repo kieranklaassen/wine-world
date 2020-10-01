@@ -40,7 +40,6 @@ const AddressBox = ({ onChange, requireFullAddress, value, ...props }) => {
     const details = newValue && (await getDetails(newValue))
     console.log(details)
 
-    debugger
     const result = {
       state: details
         ? !requireFullAddress || ['premise', 'street_address'].some(t => details.types.includes(t))

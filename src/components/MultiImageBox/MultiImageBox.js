@@ -1,4 +1,4 @@
-import { useState } from React from 'react'
+import React, { useState } from 'react'
 
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
