@@ -94,8 +94,8 @@ export default function Album() {
                 <Typography variant="h6" color="textSecondary" paragraph>
                   Not a typo or a mis-print... we actually made a Sauvignon Blanc. Citrus and green
                   apple dominate the nose - with bright acidity and a touch of richness helping to
-                  keep things fresh and exciting. The finish offers up that subtle "grassy-ness"
-                  that you'd expect.
+                  keep things fresh and exciting. The finish offers up that subtle
+                  quot;grassy-nessquot; that youlsquo;d expect.
                 </Typography>
                 <div className={classes.heroButtons}>
                   <Grid container spacing={2}>

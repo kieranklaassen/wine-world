@@ -24,7 +24,9 @@ const MultiImageBox = ({ images, overLayOpen }) => {
           onMouseEnter={() => {
             if (image != activeImage) setActiveImage(image)
           }}
-          onClick={() => setOverLay(true)}
+          onKeyUp={event => {
+            if (event.key === ' ') setOverLay(true)
+          }}
           type="button"
         >
           <ImageResizeContainer src={image} transform="c_thumb" maxWidth={400} />
@@ -45,10 +47,19 @@ const MultiImageBox = ({ images, overLayOpen }) => {
       )}
       <div className="relative z-0 grid max-w-md grid-cols-3 gap-1 sm:gap-2">
         <div className="col-span-3 overflow-hidden rounded-lg">
-          <div className="cursor-pointer" onClick={() => setOverLay(true)}>
-            {images.map(image => {
+          <div
+            role="button"
+            tabIndex="0"
+            onKeyUp={event => {
+              if (event.key === ' ') setOverLay(true)
+            }}
+            className="cursor-pointer"
+            onClick={() => setOverLay(true)}
+          >
+            {images.map((image, index) => {
               return (
                 <div
+                  key={index}
                   className={clsx({ hidden: activeImage != image, block: activeImage == image })}
                 >
                   <ImageResizeContainer src={image} maxWidth={1200} transform="c_thumb" />

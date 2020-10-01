@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
 import { IconButton } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close'
-import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import './../../index.css'
 
 import ImageResizeContainer from './../ImageResizeContainer/ImageResizeContainer'
 
 const ImageOverlay = ({ image, images, close, withBackdrop }) => {
   const [activeImage, setActiveImage] = useState(image)
+  const overlayRef = useRef()
+
+  useEffect(() => {
+    overlayRef.current.focus()
+  }, [overlayRef])
 
   const next = () => {
     const nextIndex = (images.indexOf(activeImage) + 1) % images.length
@@ -24,6 +28,12 @@ const ImageOverlay = ({ image, images, close, withBackdrop }) => {
     >
       <div
         onClick={close}
+        onKeyUp={event => {
+          if (event.key === ' ') next()
+          if (event.key === 'Escape') close()
+        }}
+        role="button"
+        tabIndex="0"
         className={clsx([
           'fixed w-full h-full bg-vine-500 modal-overlay',
           { 'opacity-50': withBackdrop, 'opacity-0': !withBackdrop }
@@ -43,17 +53,28 @@ const ImageOverlay = ({ image, images, close, withBackdrop }) => {
           {/* TODO: Add chevron to show you can go to next picture */}
 
           {images.length > 1 ? (
-            images.map(image => {
-              return (
-                <div className="cursor-pointer" onClick={() => next()}>
+            <div
+              tabIndex="-1"
+              className="cursor-pointer"
+              onClick={() => next()}
+              onKeyUp={event => {
+                if (event.key === ' ') next()
+                if (event.key === 'Escape') close()
+              }}
+              role="button"
+              ref={overlayRef}
+            >
+              {images.map((image, index) => {
+                return (
                   <div
+                    key={index}
                     className={clsx({ hidden: activeImage != image, block: activeImage == image })}
                   >
                     <ImageResizeContainer src={image} maxWidth={1200} transform="c_thumb" />
                   </div>
-                </div>
-              )
-            })
+                )
+              })}
+            </div>
           ) : (
             <ImageResizeContainer src={activeImage} maxWidth={1200} transform="c_thumb" />
           )}
