@@ -43,7 +43,7 @@ const ImageOverlay = ({ image, images, close, withBackdrop }) => {
 
       {/* Image Overlay */}
       <div className="z-20 max-w-3xl mx-auto">
-        <div className="relative row-span-6 m-2 overflow-hidden rounded-lg shadow sm:shadow-lg sm:mt-8 lg:shadow-2xl">
+        <div className="relative row-span-6 overflow-hidden rounded-lg shadow sm:shadow-lg lg:shadow-2xl">
           <div className="absolute top-0 right-0 z-30 p-2">
             <IconButton
               aria-label="close"
