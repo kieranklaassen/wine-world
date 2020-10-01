@@ -7,8 +7,15 @@
     "@storybook/addon-links": "^6.0.22",
     "@storybook/addon-viewport": "^6.0.22",
     "@storybook/react": "^6.0.22",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
-    "camel-case": "^4.1.1",
+    "eslint": "6.8.0",
+    "eslint-loader": "3.0.3",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.21.2",
+    "gatsby-plugin-eslint": "2.0.8",
+    "prettier": "1.19.1",
     "react-is": "^16.13.1"
   },
   "eslintConfig": {},
@@ -20,6 +27,7 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
+    "camel-case": "^4.1.1",
     "react": "^16.13.1",
     "tailwindcss": "^1.8.10",
     "use-places-autocomplete": "^1.5.2",
@@ -28,6 +36,12 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token y3fawy6z32s"
+    "chromatic": "npx chromatic --project-token y3fawy6z32s",
+    "analyze:lint": "eslint --ext .jsx --ext .js .",
+    "analyze:prettier": "prettier --list-different \"**/*.{css,js,jsx,json,md}\"",
+    "analyze": "npm run analyze:lint && npm run analyze:prettier",
+    "fix:lint": "eslint --ext .jsx --ext .js . --fix",
+    "fix:prettier": "prettier --write \"**/*.{css,js,jsx,json,md}\"",
+    "fix": "npm run fix:lint && npm run fix:prettier"
   }
 }
