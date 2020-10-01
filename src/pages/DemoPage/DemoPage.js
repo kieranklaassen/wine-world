@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Button from '@material-ui/core/Button'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
@@ -67,6 +67,7 @@ const images = [
 
 export default function Album() {
   const classes = useStyles()
+  const [ready, setReady] = useState(false)
 
   return (
     <React.Fragment>
@@ -100,11 +101,20 @@ export default function Album() {
                 <div className={classes.heroButtons}>
                   <Grid container spacing={2}>
                     <Grid item xs={12}>
-                      <AddressBox label="Enter your address to buy" />
+                      <AddressBox
+                        label="Enter your address to buy"
+                        required
+                        onChange={a => setReady(a.state == 'completed')}
+                      />
                     </Grid>
                     <Grid item>
                       {/* FIXME: enable button when AddressBox is filled in */}
-                      <Button variant="contained" color="primary" startIcon={<AddIcon />} disabled>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        startIcon={<AddIcon />}
+                        disabled={!ready}
+                      >
                         Add to cart
                       </Button>
                     </Grid>
