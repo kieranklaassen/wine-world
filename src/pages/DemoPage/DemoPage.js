@@ -67,7 +67,7 @@ const images = [
 
 export default function Album() {
   const classes = useStyles()
-  const [ready, setReady] = useState(false)
+  const [address, setAddress] = useState()
 
   return (
     <React.Fragment>
@@ -104,16 +104,28 @@ export default function Album() {
                       <AddressBox
                         label="Enter your address to buy"
                         required
-                        onChange={a => setReady(a.state == 'completed')}
+                        onChange={a => setAddress(a)}
                       />
+                      {address &&
+                        address.state == 'completed' &&
+                        address.administrativeAreaLevel_1 != 'California' && (
+                          <Typography variant="caption">
+                            Sorry bud, we do not ship outside California yet.
+                          </Typography>
+                        )}
                     </Grid>
                     <Grid item>
-                      {/* FIXME: enable button when AddressBox is filled in */}
                       <Button
                         variant="contained"
                         color="primary"
                         startIcon={<AddIcon />}
-                        disabled={!ready}
+                        disabled={
+                          !(
+                            address &&
+                            address.state == 'completed' &&
+                            address.administrativeAreaLevel_1 == 'California'
+                          )
+                        }
                       >
                         Add to cart
                       </Button>
