@@ -87,6 +87,7 @@ const AddressBox = ({
           setValue(newInputValue)
           setInputValue(newInputValue)
         }
+        setState(inputValue && !newInputValue ? 'empty' : null)
       }}
       renderInput={params => (
         <TextField
