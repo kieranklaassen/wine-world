@@ -6,17 +6,45 @@ export const simple = () => {
 
   return (
     <>
+      <AddressBox label="Street Address" onChange={a => setAddressInfo(a)} />
+      <pre>{JSON.stringify(addressInfo, 0, 2)}</pre>
+    </>
+  )
+}
+
+export const editExisting = () => {
+  const [addressInfo, setAddressInfo] = useState()
+
+  return (
+    <>
       <AddressBox
         label="Street Address"
-        requireFullAddress
         onChange={a => setAddressInfo(a)}
-        error={addressInfo && addressInfo.state != 'completed'}
-        helperText={
-          addressInfo &&
-          (addressInfo.state == 'empty' ? 'This field is required' : 'Please enter a full address')
-        }
+        value="1 N State St, Chicago IL 60602"
       />
-      {addressInfo && addressInfo.state}
+      <pre>{JSON.stringify(addressInfo, 0, 2)}</pre>
+    </>
+  )
+}
+
+export const required = () => {
+  const [addressInfo, setAddressInfo] = useState()
+
+  return (
+    <>
+      <AddressBox label="Street Address" onChange={a => setAddressInfo(a)} required />
+      <pre>{JSON.stringify(addressInfo, 0, 2)}</pre>
+    </>
+  )
+}
+
+export const partialAddressAllowed = () => {
+  const [addressInfo, setAddressInfo] = useState()
+
+  return (
+    <>
+      <AddressBox label="Street Address" onChange={a => setAddressInfo(a)} required allowPartial />
+      <pre>{JSON.stringify(addressInfo, 0, 2)}</pre>
     </>
   )
 }

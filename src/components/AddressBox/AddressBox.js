@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 
 import usePlacesAutocomplete, { getDetails } from 'use-places-autocomplete'
 import { TextField } from '@material-ui/core'
@@ -13,15 +14,24 @@ import { camelCase } from 'camel-case'
  * @param {*} props
  * @param {*} props.onChange
  * @param {*} props.label
- * @param {*} props.requireFullAddress
+ * @param {*} props.allowPartial
  * @param {*} props.value
  */
-const AddressBox = ({ onChange, requireFullAddress, value, ...props }) => {
+const AddressBox = ({
+  onChange,
+  allowPartial,
+  value,
+  required,
+  incompleteMessage,
+  emptyMessage,
+  ...props
+}) => {
   useScript({
     src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&libraries=places&callback=initMap`
   })
 
   const [inputValue, setInputValue] = useState(value)
+  const [state, setState] = useState()
 
   const {
     suggestions: { data },
@@ -42,11 +52,14 @@ const AddressBox = ({ onChange, requireFullAddress, value, ...props }) => {
 
     const result = {
       state: details
-        ? !requireFullAddress || ['premise', 'street_address'].some(t => details.types.includes(t))
+        ? allowPartial ||
+          ['premise', 'street_address', 'establishment'].some(t => details.types.includes(t))
           ? 'completed'
           : 'incomplete'
         : 'empty'
     }
+
+    setState(result.state)
 
     details &&
       details.address_components.forEach(addressComponent => {
@@ -56,9 +69,13 @@ const AddressBox = ({ onChange, requireFullAddress, value, ...props }) => {
     typeof onChange === 'function' && onChange(result)
   }
 
+  useEffect(() => {
+    if (value) setValue(value)
+  }, [value])
+
   return (
     <Autocomplete
-      openOnFocus={false}
+      openOnFocus={!!value}
       options={data}
       inputValue={inputValue}
       filterOptions={x => x}
@@ -77,8 +94,13 @@ const AddressBox = ({ onChange, requireFullAddress, value, ...props }) => {
         <TextField
           {...params}
           {...props}
+          error={required && state && state != 'completed'}
+          helperText={
+            required &&
+            (state == 'incomplete' ? incompleteMessage : state == 'empty' && emptyMessage)
+          }
           variant="outlined"
-          onMouseDownCapture={e => e.stopPropagation()}
+          onMouseDownCapture={!value ? e => e.stopPropagation() : null}
         />
       )}
       renderOption={option => (
@@ -89,6 +111,24 @@ const AddressBox = ({ onChange, requireFullAddress, value, ...props }) => {
       )}
     />
   )
+}
+
+AddressBox.PropTypes = {
+  onChange: PropTypes.func,
+  allowPartial: PropTypes.bool,
+  value: PropTypes.string,
+  incompleteMessage: PropTypes.string,
+  emptyMessage: PropTypes.string,
+  required: PropTypes.bool
+}
+
+AddressBox.defaultProps = {
+  onChange: undefined,
+  allowPartial: false,
+  value: '',
+  incompleteMessage: 'Please enter a full street address',
+  emptyMessage: 'This field can not be empty',
+  required: false
 }
 
 export default AddressBox
