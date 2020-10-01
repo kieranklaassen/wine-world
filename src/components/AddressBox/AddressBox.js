@@ -26,13 +26,8 @@ const AddressBox = ({
   emptyMessage,
   ...props
 }) => {
-  useScript({
-    src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&libraries=places&callback=initMap`
-  })
-
   const [inputValue, setInputValue] = useState(value)
   const [state, setState] = useState()
-
   const {
     suggestions: { data },
     setValue
@@ -69,6 +64,10 @@ const AddressBox = ({
     typeof onChange === 'function' && onChange(result)
   }
 
+  useScript({
+    src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&libraries=places&callback=initMap`
+  })
+
   useEffect(() => {
     if (value) setValue(value)
   }, [value])
@@ -90,7 +89,6 @@ const AddressBox = ({
         }
       }}
       renderInput={params => (
-        // TODO: remove onMouseDownCapture once a fix for mui-org/material-ui#20286 (mouseDown event doesn't respect openOnFocus) is released
         <TextField
           {...params}
           {...props}
@@ -100,6 +98,7 @@ const AddressBox = ({
             (state == 'incomplete' ? incompleteMessage : state == 'empty' && emptyMessage)
           }
           variant="outlined"
+          // TODO: remove onMouseDownCapture once a fix for mui-org/material-ui#20286 (mouseDown event doesn't respect openOnFocus) is released
           onMouseDownCapture={!value ? e => e.stopPropagation() : null}
         />
       )}
@@ -113,7 +112,7 @@ const AddressBox = ({
   )
 }
 
-AddressBox.PropTypes = {
+AddressBox.propTypes = {
   onChange: PropTypes.func,
   allowPartial: PropTypes.bool,
   value: PropTypes.string,
