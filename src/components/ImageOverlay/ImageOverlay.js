@@ -36,6 +36,7 @@ const ImageOverlay = ({ image, images, close, withBackdrop }) => {
               <CloseIcon />
             </IconButton>
           </div>
+          {/* TODO: Add chevron to show you can go to next picture */}
 
           {images.length > 1 ? (
             images.map((image) => {
