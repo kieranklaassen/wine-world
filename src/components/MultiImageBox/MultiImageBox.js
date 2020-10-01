@@ -12,31 +12,34 @@ const MultiImageBox = ({ images, overLayOpen }) => {
   const [overLay, setOverLay] = useState(!!overLayOpen)
 
   const ImageSwitcher = () => {
-    return images.map((image, id) => (
+    return images.map((image, index) => (
       <div
-        key={id}
+        key={index}
         className={clsx({
           'border-vine-400 border-b-4': activeImage == image
         })}
       >
-        <button
-          className="overflow-hidden transition duration-300 ease-in-out rounded-lg focus:outline-none focus:shadow-outline hover:opacity-75"
+        <div
+          className="mb-1 overflow-hidden transition duration-300 ease-in-out rounded-lg focus:outline-none focus:shadow-outline hover:opacity-75"
           onMouseEnter={() => {
             if (image != activeImage) setActiveImage(image)
           }}
+          onClick={() => setOverLay(true)}
           onKeyUp={event => {
             if (event.key === ' ') setOverLay(true)
           }}
-          type="button"
+          role="button"
+          tabIndex={index}
         >
           <ImageResizeContainer src={image} transform="c_thumb" maxWidth={400} />
-        </button>
+        </div>
       </div>
     ))
   }
 
   return (
     <div>
+      {/* Show the overlay if its active */}
       {overLay && (
         <ImageOverlay
           close={() => setOverLay(false)}
@@ -45,6 +48,8 @@ const MultiImageBox = ({ images, overLayOpen }) => {
           images={images}
         />
       )}
+
+      {/* The big picture */}
       <div className="relative z-0 grid max-w-md grid-cols-3 gap-1 sm:gap-2">
         <div className="col-span-3 overflow-hidden rounded-lg">
           <div
@@ -56,6 +61,7 @@ const MultiImageBox = ({ images, overLayOpen }) => {
             className="cursor-pointer"
             onClick={() => setOverLay(true)}
           >
+            {/* Preload all images */}
             {images.map((image, index) => {
               return (
                 <div
@@ -68,7 +74,9 @@ const MultiImageBox = ({ images, overLayOpen }) => {
             })}
           </div>
         </div>
-        {images.length > 1 && ImageSwitcher()}
+
+        {/* Show the image switcher if there are more than 1 image */}
+        {images.length > 1 && <ImageSwitcher />}
       </div>
     </div>
   )

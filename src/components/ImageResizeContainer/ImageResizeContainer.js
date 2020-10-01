@@ -4,24 +4,41 @@ import './../../tailwind.css'
 
 const ImageResizeContainer = ({ src, transform, maxWidth }) => {
   // TODO: make this work nicer for high pixel density screens
-  // TODO: make more efficient so that only max width in included if it's not in current range
+
+  // Make a 32x32 px image for preloading
+  const preloadSrc = src.replace('image/upload/', `image/upload/w_32/`)
+
+  // Make an image for browsers that do not support srcSet
+  const srcBase = src.replace('image/upload/', `image/upload/w_${maxWidth},${transform}`)
+
+  // Give breakpints for scrSet
   const breakpoints = [200, 400, 800, 1600, maxWidth].filter(bp => {
+    // TODO: make more efficient so that only max width in included if it's not in current range
     return bp <= maxWidth
   })
-  const preloadSrc = src.replace('image/upload/', `image/upload/w_32/`)
-  const srcSet = breakpoints.map(breakpoint => {
-    const options = [`w_${breakpoint}`, transform].join(',')
-    const sizedImage = src.replace('image/upload/', `image/upload/${options}/`)
-    return `${sizedImage} ${breakpoint}w`
-  })
+
+  // Create the srcSet for responsive images
+  //   https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+  const srcSet = breakpoints
+    .map(breakpoint => {
+      const options = [`w_${breakpoint}`, transform].join(',')
+      const sizedImage = src.replace('image/upload/', `image/upload/${options}/`)
+      return `${sizedImage} ${breakpoint}w`
+    })
+    .join(', ')
 
   return (
-    <div className="relative overflow-hidden" style={{ maxWidth: `${maxWidth}px` || '100%' }}>
+    <div
+      className="relative overflow-hidden"
+      style={{
+        maxWidth: `${maxWidth}px` || '100%'
+      }}
+    >
       <img
-        src={srcSet[0]}
-        srcSet={srcSet.join(', ')}
+        src={srcBase}
+        srcSet={srcSet}
         sizes="(min-width: 640px) 640px, 100vw" // TODO: determin the maximum size for images
-        alt="A wine bottle" // TODO: Add alt
+        alt="A wine bottle" // TODO: Add alt via props
         className="relative z-20"
         width={`${maxWidth}px` || '100%'}
         height={`${maxWidth}px` || '100%'} // TODO: Support non square images

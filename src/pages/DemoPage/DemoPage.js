@@ -103,7 +103,7 @@ export default function Album() {
                       <AddressBox label="Enter your address to buy" />
                     </Grid>
                     <Grid item>
-                      {/* FIXME: enabke button when AddressBox is filled in */}
+                      {/* FIXME: enable button when AddressBox is filled in */}
                       <Button variant="contained" color="primary" startIcon={<AddIcon />} disabled>
                         Add to cart
                       </Button>
