@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './../../index.css'
+import './../../tailwind.css'
 
 const ImageResizeContainer = ({ src, transform, maxWidth }) => {
   // TODO: make this work nicer for high pixel density screens

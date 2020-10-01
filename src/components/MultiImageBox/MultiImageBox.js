@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
-import './../../index.css'
+import './../../tailwind.css'
 
 import ImageOverlay from './../ImageOverlay/ImageOverlay'
 import ImageResizeContainer from './../ImageResizeContainer/ImageResizeContainer'

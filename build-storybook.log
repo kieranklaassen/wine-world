@@ -1,5 +1,5 @@
 info @storybook/react v6.0.22
-info 
+info
 info clean outputDir..
 info => Copying prebuild dll's..
 info => Building manager..
@@ -19,9 +19,9 @@ info => Using custom postcss.config.js
 info => Using default Webpack setup.
 info => Compiling preview..
 <s> [webpack.Progress] 0% compiling
-<s> [webpack.Progress] 10% building 0/0 modules 0 active 
+<s> [webpack.Progress] 10% building 0/0 modules 0 active
 <s> [webpack.Progress] 10% building 0/1 modules 1 active multi /Users/kieranklaassen/wine-world/node_modules/@storybook/core/dist/server/common/polyfills.js /Users/kieranklaassen/wine-world/node_modules/@storybook/core/dist/server/preview/globals.js /Users/kieranklaassen/wine-world/.storybook/storybook-init-framework-entry.js /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/frameworks/common/config.js-generated-other-entry.js /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/frameworks/react/config.js-generated-other-entry.js /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-links/dist/preset/addDecorator.js-generated-other-entry.js /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-actions/dist/preset/addDecorator.js-generated-other-entry.js /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-actions/dist/preset/addArgs.js-generated-other-entry.js /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-backgrounds/dist/preset/defaultParameters.js-generated-other-entry.js /Users/kieranklaassen/wine-world/.storybook/preview.js-generated-config-entry.js /Users/kieranklaassen/wine-world/.storybook/generated-stories-entry.js
-<s> [webpack.Progress] 10% building 1/1 modules 0 active 
+<s> [webpack.Progress] 10% building 1/1 modules 0 active
 <s> [webpack.Progress] 10% building 1/2 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-links/dist/preset/addDecorator.js-generated-other-entry.js
 <s> [webpack.Progress] 10% building 1/3 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-actions/dist/preset/addDecorator.js-generated-other-entry.js
 <s> [webpack.Progress] 10% building 1/4 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-actions/dist/preset/addArgs.js-generated-other-entry.js
@@ -55,7 +55,7 @@ info => Compiling preview..
 <s> [webpack.Progress] 11% building 15/18 modules 3 active /Users/kieranklaassen/wine-world/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/kieranklaassen/wine-world/.storybook/generated-stories-entry.js
 <s> [webpack.Progress] 11% building 16/18 modules 2 active /Users/kieranklaassen/wine-world/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/kieranklaassen/wine-world/.storybook/generated-stories-entry.js
 <s> [webpack.Progress] 12% building 17/18 modules 1 active /Users/kieranklaassen/wine-world/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/kieranklaassen/wine-world/.storybook/generated-stories-entry.js
-<s> [webpack.Progress] 12% building 18/18 modules 0 active 
+<s> [webpack.Progress] 12% building 18/18 modules 0 active
 <s> [webpack.Progress] 12% building 18/19 modules 1 active /Users/kieranklaassen/wine-world/src sync /^\.(?:(?:^|\/|(?:(?:(?!(?:^|\/)\.).)*?)\/)(?!\.)(?=.)[^/]*?\.stories\.(js|jsx|ts|tsx|mdx))$/
 <s> [webpack.Progress] 12% building 18/20 modules 2 active /Users/kieranklaassen/wine-world/node_modules/babel-loader/lib/index.js??ref--4-0!/Users/kieranklaassen/wine-world/.storybook/preview.js
 <s> [webpack.Progress] 12% building 18/21 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-actions/dist/index.js
@@ -91,9 +91,9 @@ info => Compiling preview..
 <s> [webpack.Progress] 13% building 33/36 modules 3 active /Users/kieranklaassen/wine-world/node_modules/core-js/modules/es.object.get-own-property-descriptors.js
 <s> [webpack.Progress] 14% building 34/36 modules 2 active /Users/kieranklaassen/wine-world/node_modules/core-js/modules/es.object.get-own-property-descriptors.js
 <s> [webpack.Progress] 14% building 35/36 modules 1 active /Users/kieranklaassen/wine-world/node_modules/core-js/modules/es.object.get-own-property-descriptors.js
-<s> [webpack.Progress] 14% building 36/36 modules 0 active 
+<s> [webpack.Progress] 14% building 36/36 modules 0 active
 <s> [webpack.Progress] 14% building 36/37 modules 1 active delegated "3yYM" from dll-reference storybook_docs_dll
-<s> [webpack.Progress] 14% building 37/37 modules 0 active 
+<s> [webpack.Progress] 14% building 37/37 modules 0 active
 <s> [webpack.Progress] 14% building 37/38 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-actions/dist/constants.js
 <s> [webpack.Progress] 14% building 37/39 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/frameworks/common/normalizeArgTypes.js
 <s> [webpack.Progress] 14% building 37/40 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/frameworks/react/extractProps.js
@@ -131,23 +131,23 @@ info => Compiling preview..
 <s> [webpack.Progress] 16% building 53/56 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@storybook/client-logger/dist/index.js
 <s> [webpack.Progress] 16% building 54/56 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@storybook/client-logger/dist/index.js
 <s> [webpack.Progress] 16% building 55/56 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@storybook/client-logger/dist/index.js
-<s> [webpack.Progress] 16% building 56/56 modules 0 active 
+<s> [webpack.Progress] 16% building 56/56 modules 0 active
 <s> [webpack.Progress] 16% building 56/57 modules 1 active delegated "MvUL" from dll-reference storybook_docs_dll
-<s> [webpack.Progress] 16% building 57/57 modules 0 active 
+<s> [webpack.Progress] 16% building 57/57 modules 0 active
 <s> [webpack.Progress] 16% building 57/58 modules 1 active delegated "ax0f" from dll-reference storybook_docs_dll
-<s> [webpack.Progress] 16% building 58/58 modules 0 active 
+<s> [webpack.Progress] 16% building 58/58 modules 0 active
 <s> [webpack.Progress] 16% building 58/59 modules 1 active delegated "ct80" from dll-reference storybook_docs_dll
-<s> [webpack.Progress] 17% building 59/59 modules 0 active 
+<s> [webpack.Progress] 17% building 59/59 modules 0 active
 <s> [webpack.Progress] 17% building 59/60 modules 1 active delegated "N4z3" from dll-reference storybook_docs_dll
-<s> [webpack.Progress] 17% building 60/60 modules 0 active 
+<s> [webpack.Progress] 17% building 60/60 modules 0 active
 <s> [webpack.Progress] 17% building 60/61 modules 1 active delegated "GFpt" from dll-reference storybook_docs_dll
-<s> [webpack.Progress] 17% building 61/61 modules 0 active 
+<s> [webpack.Progress] 17% building 61/61 modules 0 active
 <s> [webpack.Progress] 17% building 61/62 modules 1 active delegated "1Mu/" from dll-reference storybook_docs_dll
-<s> [webpack.Progress] 17% building 62/62 modules 0 active 
+<s> [webpack.Progress] 17% building 62/62 modules 0 active
 <s> [webpack.Progress] 17% building 62/63 modules 1 active delegated "oD4t" from dll-reference storybook_docs_dll
-<s> [webpack.Progress] 17% building 63/63 modules 0 active 
+<s> [webpack.Progress] 17% building 63/63 modules 0 active
 <s> [webpack.Progress] 17% building 63/64 modules 1 active delegated "2sZ7" from dll-reference storybook_docs_dll
-<s> [webpack.Progress] 17% building 64/64 modules 0 active 
+<s> [webpack.Progress] 17% building 64/64 modules 0 active
 <s> [webpack.Progress] 17% building 64/65 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/blocks/index.js
 <s> [webpack.Progress] 17% building 64/66 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/lib/docgen/index.js
 <s> [webpack.Progress] 17% building 64/67 modules 3 active /Users/kieranklaassen/wine-world/node_modules/core-js/features/symbol/index.js
@@ -337,7 +337,7 @@ info => Compiling preview..
 <s> [webpack.Progress] 28% building 157/158 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@storybook/react/dist/client/preview/types-6-0.js
 <s> [webpack.Progress] 28% building 157/159 modules 2 active delegated "fRV1" from dll-reference storybook_docs_dll
 <s> [webpack.Progress] 28% building 158/159 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@storybook/react/dist/client/preview/types-6-0.js
-<s> [webpack.Progress] 29% building 159/159 modules 0 active 
+<s> [webpack.Progress] 29% building 159/159 modules 0 active
 <s> [webpack.Progress] 29% building 159/160 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-actions/dist/models/ActionDisplay.js
 <s> [webpack.Progress] 29% building 159/161 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-actions/dist/models/ActionsFunction.js
 <s> [webpack.Progress] 29% building 159/162 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-actions/dist/models/ActionOptions.js
@@ -543,12 +543,12 @@ info => Compiling preview..
 <s> [webpack.Progress] 40% building 250/271 modules 21 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/frameworks/react/lib/inspection/inspectValue.js
 <s> [webpack.Progress] 40% building 250/272 modules 22 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/frameworks/react/lib/defaultValues/generateObject.js
 <s> [webpack.Progress] 40% building 250/273 modules 23 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/frameworks/react/lib/defaultValues/generateArray.js
-<s> [webpack.Progress] 40% building 250/274 modules 24 active /Users/kieranklaassen/wine-world/node_modules/style-loader/dist/cjs.js!/Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/index.css
+<s> [webpack.Progress] 40% building 250/274 modules 24 active /Users/kieranklaassen/wine-world/node_modules/style-loader/dist/cjs.js!/Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/tailwind.css
 <s> [webpack.Progress] 40% building 251/274 modules 23 active /Users/kieranklaassen/wine-world/node_modules/@storybook/addon-docs/dist/frameworks/react/lib/defaultValues/generateArray.js
-<s> [webpack.Progress] 40% building 251/275 modules 24 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/index.css
-<s> [webpack.Progress] 40% building 252/275 modules 23 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/index.css
-<s> [webpack.Progress] 40% building 253/275 modules 22 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/index.css
-<s> [webpack.Progress] 40% building 254/275 modules 21 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/index.css
+<s> [webpack.Progress] 40% building 251/275 modules 24 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/tailwind.css
+<s> [webpack.Progress] 40% building 252/275 modules 23 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/tailwind.css
+<s> [webpack.Progress] 40% building 253/275 modules 22 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/tailwind.css
+<s> [webpack.Progress] 40% building 254/275 modules 21 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/tailwind.css
 <s> [webpack.Progress] 40% building 254/276 modules 22 active /Users/kieranklaassen/wine-world/node_modules/@storybook/components/dist/brand/StorybookIcon.js
 <s> [webpack.Progress] 40% building 254/277 modules 23 active /Users/kieranklaassen/wine-world/node_modules/@storybook/components/dist/brand/StorybookLogo.js
 <s> [webpack.Progress] 40% building 254/278 modules 24 active /Users/kieranklaassen/wine-world/node_modules/@storybook/components/dist/icon/icon.js
@@ -740,7 +740,7 @@ info => Compiling preview..
 <s> [webpack.Progress] 52% building 357/361 modules 4 active /Users/kieranklaassen/wine-world/node_modules/use-script/dist/esm/index.js
 <s> [webpack.Progress] 52% building 358/361 modules 3 active /Users/kieranklaassen/wine-world/node_modules/use-script/dist/esm/index.js
 <s> [webpack.Progress] 53% building 359/361 modules 2 active /Users/kieranklaassen/wine-world/node_modules/use-script/dist/esm/index.js
-<s> [webpack.Progress] 53% building 360/361 modules 1 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/index.css
+<s> [webpack.Progress] 53% building 360/361 modules 1 active /Users/kieranklaassen/wine-world/node_modules/css-loader/dist/cjs.js??ref--11-1!/Users/kieranklaassen/wine-world/node_modules/postcss-loader/src/index.js??ref--11-2!/Users/kieranklaassen/wine-world/src/tailwind.css
 <s> [webpack.Progress] 53% building 360/362 modules 2 active /Users/kieranklaassen/wine-world/node_modules/doctrine/lib/utility.js
 <s> [webpack.Progress] 53% building 360/363 modules 3 active delegated "l1C2" from dll-reference storybook_docs_dll
 <s> [webpack.Progress] 53% building 361/363 modules 2 active /Users/kieranklaassen/wine-world/node_modules/doctrine/lib/utility.js
@@ -1789,7 +1789,7 @@ info => Compiling preview..
 <s> [webpack.Progress] 69% building 882/885 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/InputBase/utils.js
 <s> [webpack.Progress] 69% building 883/885 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/InputBase/utils.js
 <s> [webpack.Progress] 69% building 884/885 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/InputBase/utils.js
-<s> [webpack.Progress] 70% building 885/885 modules 0 active 
+<s> [webpack.Progress] 70% building 885/885 modules 0 active
 <s> [webpack.Progress] 69% building 885/886 modules 1 active /Users/kieranklaassen/wine-world/node_modules/hyphenate-style-name/index.js
 <s> [webpack.Progress] 69% building 885/887 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/InputBase/index.js
 <s> [webpack.Progress] 69% building 885/888 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/Input/index.js
@@ -2029,7 +2029,7 @@ info => Compiling preview..
 <s> [webpack.Progress] 69% building 1002/1005 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/ExpansionPanel/ExpansionPanelContext.js
 <s> [webpack.Progress] 69% building 1003/1005 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/ExpansionPanel/ExpansionPanelContext.js
 <s> [webpack.Progress] 69% building 1004/1005 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/ExpansionPanel/ExpansionPanelContext.js
-<s> [webpack.Progress] 70% building 1005/1005 modules 0 active 
+<s> [webpack.Progress] 70% building 1005/1005 modules 0 active
 <s> [webpack.Progress] 69% building 1005/1006 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/internal/svg-icons/CheckBoxOutlineBlank.js
 <s> [webpack.Progress] 69% building 1005/1007 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/internal/svg-icons/IndeterminateCheckBox.js
 <s> [webpack.Progress] 69% building 1005/1008 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/internal/svg-icons/CheckBox.js
@@ -2045,7 +2045,7 @@ info => Compiling preview..
 <s> [webpack.Progress] 69% building 1010/1013 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@babel/runtime/helpers/esm/toArray.js
 <s> [webpack.Progress] 69% building 1011/1013 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@babel/runtime/helpers/esm/toArray.js
 <s> [webpack.Progress] 69% building 1012/1013 modules 1 active /Users/kieranklaassen/wine-world/node_modules/@babel/runtime/helpers/esm/toArray.js
-<s> [webpack.Progress] 70% building 1013/1013 modules 0 active 
+<s> [webpack.Progress] 70% building 1013/1013 modules 0 active
 <s> [webpack.Progress] 69% building 1013/1014 modules 1 active /Users/kieranklaassen/wine-world/node_modules/entities/lib/decode_codepoint.js
 <s> [webpack.Progress] 69% building 1013/1015 modules 2 active /Users/kieranklaassen/wine-world/node_modules/entities/maps/xml.json
 <s> [webpack.Progress] 69% building 1013/1016 modules 3 active /Users/kieranklaassen/wine-world/node_modules/entities/maps/entities.json
@@ -2055,10 +2055,10 @@ info => Compiling preview..
 <s> [webpack.Progress] 69% building 1015/1018 modules 3 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/internal/svg-icons/MoreHoriz.js
 <s> [webpack.Progress] 69% building 1016/1018 modules 2 active /Users/kieranklaassen/wine-world/node_modules/@material-ui/core/esm/internal/svg-icons/MoreHoriz.js
 <s> [webpack.Progress] 69% building 1017/1018 modules 1 active /Users/kieranklaassen/wine-world/node_modules/entities/maps/entities.json
-<s> [webpack.Progress] 70% building 1018/1018 modules 0 active 
+<s> [webpack.Progress] 70% building 1018/1018 modules 0 active
 <s> [webpack.Progress] 69% building 1018/1019 modules 1 active /Users/kieranklaassen/wine-world/node_modules/entities/maps/decode.json
-<s> [webpack.Progress] 70% building 1019/1019 modules 0 active 
-<s> [webpack.Progress] 70% building 1019/1019 modules 0 active 
+<s> [webpack.Progress] 70% building 1019/1019 modules 0 active
+<s> [webpack.Progress] 70% building 1019/1019 modules 0 active
 <s> [webpack.Progress] 70% finish module graph
 <s> [webpack.Progress] 70% finish module graph FlagDependencyExportsPlugin
 <s> [webpack.Progress] 70% finish module graph WasmFinalizeExportsPlugin
@@ -2147,12 +2147,12 @@ info => Compiling preview..
 <s> [webpack.Progress] 95% emitting HtmlWebpackPlugin
 <s> [webpack.Progress] 98% after emitting
 <s> [webpack.Progress] 98% after emitting SizeLimitsPlugin
-<s> [webpack.Progress] 100% 
+<s> [webpack.Progress] 100%
 
 info => Preview built (38 s)
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
-WARN Assets: 
+WARN Assets:
 WARN   vendors~main.46a30d03292914c1ea63.bundle.js (1.48 MiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
@@ -2160,8 +2160,8 @@ WARN   main (1.56 MiB)
 WARN       runtime~main.46a30d03292914c1ea63.bundle.js
 WARN       vendors~main.46a30d03292914c1ea63.bundle.js
 WARN       main.46a30d03292914c1ea63.bundle.js
-WARN 
-WARN webpack performance recommendations: 
+WARN
+WARN webpack performance recommendations:
 WARN You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
 info => Output directory: /var/folders/n9/bsdh91bx6t9843kqw3g9ydk40000gn/T/chromatic-280348qcWgh9ehwE8
